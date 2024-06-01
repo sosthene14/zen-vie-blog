@@ -4,13 +4,17 @@ import Navigation from "@/components/global/Navigation.astro";
 import Footer from "@/components/global/Footer.astro";
 ---
 
-<html lang="en">
+<html lang=fr">
+ 
   <head>
+    <meta charset="utf-8" />
     <BaseHead />
   </head>
   <body class="bg-white flex flex-col min-h-screen">
     <Navigation />
+  
     <main class="flex-grow"><slot /></main>
+    
     <Footer />
   </body>
 </html>
