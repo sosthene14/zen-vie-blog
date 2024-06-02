@@ -16,6 +16,6 @@ export default defineConfig({
     skipInline: false,
     drafts: true
   },
-  site: 'https://lexingtonthemes.com',
+  site: 'https://zen-vie-blog.vercel.app',
   integrations: [tailwind(), sitemap(), mdx()]
 });
