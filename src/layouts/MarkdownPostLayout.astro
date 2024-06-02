@@ -11,13 +11,12 @@ Use AstroSeo in all the pages you want different Seo than the index page
   <head>
     <SEO
       title="Tranquility Daily: Cultivating Serenity in Everyday Life"
-      description="Explorez des stratégies pratiques pour gérer le stress et cultiver la sérénité dans votre vie quotidienne. Découvrez des conseils inspirés de la pleine conscience, de la méditation et de la gestion des émotions pour un bien-être mental durable."
+      description={frontmatter.description}
       openGraph={{
         basic: {
-          title: "Comment Cultiver la Sérénité au Milieu du Chaos: Stratégies Pratiques pour Gérer le Stress Quotidien",
-          type: "Santé",
-          image:
-            "https://avatars.githubusercontent.com/u/111325386?s=400&u=dca1778c3150a33633f91cbe8da1e6d6bb89b75b&v=4",
+          title: `${frontmatter.title} | Sosthene`,
+          type: "Santé,Hygène de vie,Cultiver la sérénité,Réseaux sociaux",
+          image: "https://i.ibb.co/yWzjYyW/logo-no-background.png",
         },
       }}
       twitter={{
@@ -28,16 +27,21 @@ Use AstroSeo in all the pages you want different Seo than the index page
         meta: [
           {
             name: "twitter:image",
-            content:
-              "https://avatars.githubusercontent.com/u/111325386?s=400&u=dca1778c3150a33633f91cbe8da1e6d6bb89b75b&v=4",
+            content: "https://i.ibb.co/yWzjYyW/logo-no-background.png",
           },
           { name: "twitter:title", content: "Sosthene mounsambote" },
-          { name: "twitter:description", content: "Agent" },
+          {
+            name: "twitter:description",
+            content: "un blog vous permettant de mieux vivre",
+          },
         ],
       }}
     />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
+    <title>{frontmatter.title}</title>
+    <meta name="description" content={frontmatter.description} />
+    <link rel="icon" type="image/x-icon" href="../" />
   </head>
   <BaseLayout>
     <section>
@@ -81,7 +85,5 @@ Use AstroSeo in all the pages you want different Seo than the index page
         </div>
       </div>
     </section>
-    
   </BaseLayout>
-  
 </html>
